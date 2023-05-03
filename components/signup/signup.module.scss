@@ -1,0 +1,35 @@
+.form {
+  .inputContainer {
+    background-color: #f2f6fc;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 350px;
+    margin-bottom: 15px;
+    label {
+      font-size: 16px;
+      font-weight: bolder;
+      color: #0071bc;
+      margin-right: 10px;
+    }
+    input {
+      background-color: #f2f6fc;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #0071bc;
+      height: 20px;
+    }
+  }
+  button {
+    width: 350px;
+    border-radius: 10px;
+    background-color: #0071bc;
+    border: none;
+    height: 50px;
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+}
