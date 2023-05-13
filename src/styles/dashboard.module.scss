@@ -1,0 +1,215 @@
+.top {
+  background-size: cover;
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+}
+.dashboardContainer {
+  background-color: #f8f8f8;
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.dashboard {
+  display: flex;
+  padding: 10px;
+  position: relative;
+  top: -70px;
+  height: 100%;
+  z-index: 1000;
+  .menu {
+    padding: 10px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    // height: 500px;
+
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      margin-left: 15px;
+      span {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #b5b5b5;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      p {
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+
+    .overall {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: "Rubik", sans-serif;
+      p {
+        font-weight: bolder;
+        font-size: 25px;
+      }
+      span {
+        color: #b5b5b5;
+
+        font-weight: 500;
+      }
+    }
+
+    .title {
+      color: #b5b5b5;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-left: 20px;
+      font-family: "Rubik", sans-serif;
+    }
+    .products {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 40px;
+      margin-top: 10px;
+      .product {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        padding: 5px 8px;
+      }
+      .product1 {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        background-color: rgba($color: #fe2e60, $alpha: 0.1);
+        padding: 5px 8px;
+        border-radius: 10px;
+      }
+
+      .addproduct {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        padding: 5px 15px;
+        span {
+          margin-left: 8px;
+        }
+      }
+    }
+    .signout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bolder;
+      padding: 5px 8px;
+      margin-top: 100px;
+      margin-right: 5px;
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .globalAn {
+    display: flex;
+    .container {
+      width: 300px;
+      display: flex;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 10px;
+      margin-top: 0;
+      background-color: rgb(254, 190, 22, 1);
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      height: 90px;
+      padding: 10px 15px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .title {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tableReview {
+    margin-left: 10px;
+    background-image: url("/geo.jpg");
+    background-size: cover;
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 520px;
+
+    margin-right: 10px;
+
+    // overflow: hidden;
+
+    table {
+      background-color: white;
+      border-radius: 5px;
+      padding: 5px;
+      td {
+        font-size: 13px;
+        padding: 5px 10px;
+        border-bottom: 1px solid rgb(230, 230, 230);
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: bolder;
+      }
+
+      .title {
+        color: #b5b5b5;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-family: "Rubik", sans-serif;
+      }
+      .positive {
+        background-color: rgba(75, 255, 87, 0.3);
+        color: #009245;
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
+
+      .negative {
+        background-color: rgba(254, 46, 96, 0.3);
+        color: rgb(254, 46, 96);
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
+      .neutral {
+        background-color: rgb(254, 190, 22, 0.3);
+        color: rgb(254, 190, 22);
+        padding: 2px 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .horz {
+    background-color: white;
+    border-radius: 10px;
+    height: 150px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}

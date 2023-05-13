@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.leftSide}>
-        <Logo></Logo>
+        <Logo fs={28} width={25} height={45}></Logo>
         <span>Hey, Enter your details to login or to create an accout </span>
         <div className={styles.toggleContainer}>
           <p
@@ -49,12 +49,12 @@ export default function Home() {
           <div className={styles.textContainer}>
             <h1>Start your journey with us </h1>
             <div className={styles.text}>
-              <Image
+              {/* <Image
                 src="/person.png"
                 width={230}
                 height={320}
                 className={styles.person}
-              ></Image>
+              ></Image> */}
               <p>
                 Feel-it makes it simple to clean, label and visualize customer
                 feedback — all in one place. Powered by cutting edge Artificial

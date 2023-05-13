@@ -1,0 +1,52 @@
+.container {
+  width: 300px;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+  padding: 5px;
+  margin: 10px;
+  margin-top: 0;
+  background-color: white;
+  overflow: hidden;
+  height: 90px;
+  padding: 10px 15px;
+  .line {
+    width: 70%;
+    height: 55px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1000;
+    right: 0;
+    bottom: 0;
+  }
+  .textContainer {
+    font-family: "Rubik", sans-serif;
+    margin-top: 10px;
+    .title {
+      font-weight: bolder;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .totale {
+      font-weight: 900;
+
+      font-size: 20px;
+    }
+    .cal {
+      font-size: 11px;
+      display: flex;
+      .aug {
+        display: flex;
+        justify-content: center;
+        margin-right: 5px;
+      }
+      p {
+        color: #b5b5b5;
+        font-weight: 500;
+      }
+    }
+  }
+}
