@@ -78,13 +78,17 @@
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      margin-left: 40px;
-      margin-top: 10px;
+      margin-left: 20px;
+      margin-top: 5px;
       .product {
         display: flex;
         align-items: center;
         font-weight: bolder;
         padding: 5px 8px;
+        .analytic {
+          font-size: 27px;
+          color: #0071bc;
+        }
       }
       .product1 {
         display: flex;
@@ -93,13 +97,17 @@
         background-color: rgba($color: #fe2e60, $alpha: 0.1);
         padding: 5px 8px;
         border-radius: 10px;
+        .analytic {
+          font-size: 25px;
+        }
       }
 
       .addproduct {
         display: flex;
         align-items: center;
         font-weight: bolder;
-        padding: 5px 15px;
+        padding: 5px 10px;
+        margin-top: 10px;
         span {
           margin-left: 8px;
         }
@@ -211,5 +219,23 @@
     height: 150px;
     padding: 10px;
     box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  .pie {
+    background-color: white;
+    border-radius: 10px;
+    height: 150px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    width: 300px;
+    margin-right: 10px;
+    // height: 400px;
+  }
+
+  .line {
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
   }
 }

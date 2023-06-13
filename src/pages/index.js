@@ -49,12 +49,6 @@ export default function Home() {
           <div className={styles.textContainer}>
             <h1>Start your journey with us </h1>
             <div className={styles.text}>
-              {/* <Image
-                src="/person.png"
-                width={230}
-                height={320}
-                className={styles.person}
-              ></Image> */}
               <p>
                 Feel-it makes it simple to clean, label and visualize customer
                 feedback — all in one place. Powered by cutting edge Artificial

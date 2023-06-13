@@ -1,0 +1,75 @@
+.formContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  padding: 50px;
+  border-radius: 10px;
+
+  .form {
+    background-image: url("/geo.jpg");
+    background-size: cover;
+    width: 25%;
+    padding: 5px;
+    border-radius: 10px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    form {
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        margin-bottom: 10px;
+      }
+      .inputContainer {
+        background-color: #f2f6fc;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 300px;
+        margin-bottom: 15px;
+        label {
+          font-size: 16px;
+          font-weight: bolder;
+          color: #0071bc;
+          margin-right: 10px;
+        }
+        input {
+          background-color: #f2f6fc;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #0071bc;
+          height: 20px;
+        }
+      }
+      button {
+        width: 300px;
+        border-radius: 10px;
+        background-color: #0071bc;
+        border: none;
+        height: 50px;
+        font-weight: 900;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+      }
+      .close {
+        align-self: flex-end;
+        font-size: 23px;
+        cursor: pointer;
+      }
+    }
+  }
+}

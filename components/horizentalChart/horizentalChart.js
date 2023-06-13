@@ -53,11 +53,11 @@ export const options = {
 
 const labels = ["Positive", "Neutral", "Negative"];
 
-export const data = {
+const data = {
   labels,
   datasets: [
     {
-      data: [11865, 9875, 11040],
+      data: [19865, 3875, 11040],
       backgroundColor: ["#009245", "rgb(254, 46, 96)", "rgb(254, 190, 22)"],
       borderWidth: 1,
       barThickness: 15,

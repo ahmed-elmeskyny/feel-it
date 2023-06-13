@@ -4,6 +4,48 @@ import GlobalCalnat from "components/globalCalnat/globalCalnat";
 import Logo from "components/logo/logo";
 import Image from "next/image";
 import HorizontalChart from "components/horizentalChart/horizentalChart";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  PointElement,
+  LineElement,
+  Filler,
+} from "chart.js";
+
+import { Line } from "react-chartjs-2";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+  Filler,
+  Title,
+  Tooltip,
+  Legend
+);
+import PieChart from "components/pieChart/pieChart";
+import CompareFrom from "components/compareForm/compareForm";
+import { useState } from "react";
+import { MdAnalytics } from "react-icons/md";
+import AddanaForm from "components/addAnaForm/addAnaForm";
+
+const options = {
+  elements: {
+    line: {
+      tension: 0.3,
+      borderWidth: 2,
+      borderColor: ["#009245", "rgb(254, 46, 96)", "rgb(254, 190, 22)"],
+      backgroundColor: ["#009245", "rgb(254, 46, 96)", "rgb(254, 190, 22)"],
+    },
+  },
+};
 
 const dataP = {
   labels: [
@@ -22,6 +64,37 @@ const dataP = {
     {
       label: "sales",
       data: [10, 50, 40, 30, 60, 100, 50, 40, 30, 60],
+    },
+  ],
+};
+
+const data = {
+  labels: [
+    "Jan",
+    "Fev",
+    "Mar",
+    "Apr",
+    "May",
+    "Jan",
+    "Fev",
+    "Mar",
+    "Apr",
+    "May",
+  ],
+  datasets: [
+    {
+      label: "Positive",
+      data: [12, 48, 46, 26, 60, 100, 50, 40, 30, 60],
+      backgroundColor: "#009245",
+      Bordercolor: "#009245",
+    },
+    {
+      label: "Negative",
+      data: [10, 50, 40, 30, 60, 30, 25, 10, 5, 3],
+    },
+    {
+      label: "Neutral",
+      data: [11, 25, 4, 0, 30, 70, 15, 66, 43, 38],
     },
   ],
 };
@@ -453,7 +526,11 @@ const reviews = [
     sentiment: "Negative",
   },
 ];
-export default function Home() {
+
+export default function dashboard() {
+  const [compare, toggleCompare] = useState(false);
+  const [analytics, toggleAnalytics] = useState(false);
+
   return (
     <div className={styles.dashboardContainer}>
       <div
@@ -484,21 +561,24 @@ export default function Home() {
 
           <p className={styles.title}>Products</p>
           <div className={styles.products}>
-            <div className={styles.product1}>
-              <Image src="/box.png" width={35} height={35}></Image>
-              Produit 1
+            <div className={styles.product}>
+              <MdAnalytics className={styles.analytic}></MdAnalytics>
+              Analytics 1
             </div>
             <div className={styles.product}>
-              <Image src="/box.png" width={35} height={35}></Image>
-              Produit 2
+              <MdAnalytics className={styles.analytic}></MdAnalytics>
+              Analytics 2
             </div>
             <div className={styles.product}>
-              <Image src="/box.png" width={35} height={35}></Image>
-              Produit 3
+              <MdAnalytics className={styles.analytic}></MdAnalytics>
+              Analytics 3
             </div>
-            <div className={styles.addproduct}>
+            <div
+              className={styles.addproduct}
+              onClick={() => toggleAnalytics(true)}
+            >
               <Image src="/add.png" width={20} height={20}></Image>
-              <span> Add product</span>
+              <span> Add an Analytic</span>
             </div>
           </div>
 
@@ -539,11 +619,21 @@ export default function Home() {
               Bordercolor={"rgb(254, 190, 22)"}
               backgroundColor={"rgb(254, 190, 22,0.3)"}
             ></GlobalCalnat>
-            <div className={styles.container}>
+            <div
+              className={styles.container}
+              onClick={() => toggleCompare(true)}
+            >
               <p>Compare reviews of 2 months</p>
               <Image src="/addwhite.png" width={30} height={30}></Image>
             </div>
+            {compare ? (
+              <CompareFrom toggleCompare={toggleCompare}></CompareFrom>
+            ) : null}
+            {analytics ? (
+              <AddanaForm toggleAnalytics={toggleAnalytics}></AddanaForm>
+            ) : null}
           </div>
+
           <h2 className={styles.title}>Sentiment on Reviews</h2>
           <div style={{ display: "flex" }}>
             <div className={styles.tableReview}>
@@ -579,9 +669,18 @@ export default function Home() {
                 </tbody>
               </table>
             </div>
-
-            <div className={styles.horz}>
-              <HorizontalChart></HorizontalChart>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div className={styles.line}>
+                <Line data={data} options={options} />
+              </div>
+              <div style={{ display: "flex" }}>
+                <div className={styles.pie}>
+                  <PieChart></PieChart>
+                </div>
+                <div className={styles.horz}>
+                  <HorizontalChart></HorizontalChart>
+                </div>
+              </div>
             </div>
           </div>
         </div>
