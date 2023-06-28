@@ -51,22 +51,21 @@ export const options = {
   },
 };
 
-const labels = ["Positive", "Neutral", "Negative"];
+const HorizontalChart = ({ dataT }) => {
+  const labels = ["Positive", "Negative", "Neutral"];
+  const data = {
+    labels,
+    datasets: [
+      {
+        data: dataT,
+        backgroundColor: ["#009245", "rgb(254, 46, 96)", "rgb(254, 190, 22)"],
+        borderWidth: 1,
+        barThickness: 15,
+        borderRadius: 10,
+      },
+    ],
+  };
 
-const data = {
-  labels,
-  datasets: [
-    {
-      data: [19865, 3875, 11040],
-      backgroundColor: ["#009245", "rgb(254, 46, 96)", "rgb(254, 190, 22)"],
-      borderWidth: 1,
-      barThickness: 15,
-      borderRadius: 10,
-    },
-  ],
-};
-
-const HorizontalChart = () => {
   return <Bar data={data} options={options} />;
 };
 

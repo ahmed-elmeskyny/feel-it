@@ -9,7 +9,7 @@ const CompareFrom = ({ toggleCompare }) => {
             className={styles.close}
             onClick={() => toggleCompare(false)}
           ></TiDelete>
-          <h3>DataSet 1</h3>
+          <h3>DataSet</h3>
           <div className={styles.inputContainer}>
             <label>Name</label>
             <input type="text"></input>
@@ -18,15 +18,7 @@ const CompareFrom = ({ toggleCompare }) => {
             <label>File CSV</label>
             <input type="file"></input>
           </div>
-          <h3>DataSet 2</h3>
-          <div className={styles.inputContainer}>
-            <label>Name</label>
-            <input type="password"></input>
-          </div>
-          <div className={styles.inputContainer}>
-            <label>File CSV</label>
-            <input type="file"></input>
-          </div>
+
           <button>Compare</button>
         </form>
       </div>

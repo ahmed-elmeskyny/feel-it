@@ -9,6 +9,7 @@ const Logo = ({ fs, width, height }) => {
         width={width}
         height={height}
         className={styles.img}
+        alt="logo"
       ></Image>
       <div>
         <p style={{ fontSize: fs }}>Feel-It</p>

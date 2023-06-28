@@ -8,12 +8,12 @@ import axios from "axios";
 
 export default async (req, res) => {
   try {
-    const url = req.query.url;
-    console.log(url);
+    const comment = req.query.comment;
+    console.log(comment);
     const response = await axios.post(
-      "http://127.0.0.1:5000/nlp_model",
+      "http://127.0.0.1:5000/nlp_test",
       {
-        url_str: url,
+        comment: comment,
       },
       {
         headers: {

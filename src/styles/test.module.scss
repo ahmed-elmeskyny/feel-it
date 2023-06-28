@@ -21,14 +21,12 @@
     padding-top: 25px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    // justify-content: space-around;
+    // justify-content: center;
+    align-items: center;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    // height: 500px;
-
+    width: 200px;
     .avatar {
       display: flex;
       flex-direction: column;
@@ -48,71 +46,6 @@
       }
     }
 
-    .overall {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-family: "Rubik", sans-serif;
-      p {
-        font-weight: bolder;
-        font-size: 25px;
-      }
-      span {
-        color: #b5b5b5;
-
-        font-weight: 500;
-      }
-    }
-
-    .title {
-      color: #b5b5b5;
-      font-size: 14px;
-      font-weight: 500;
-      margin-top: 10px;
-      margin-left: 20px;
-      font-family: "Rubik", sans-serif;
-    }
-    .products {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      margin-left: 20px;
-      margin-top: 5px;
-      .product {
-        display: flex;
-        align-items: center;
-        font-weight: bolder;
-        padding: 5px 8px;
-        .analytic {
-          font-size: 27px;
-          color: #0071bc;
-        }
-      }
-      .product1 {
-        display: flex;
-        align-items: center;
-        font-weight: bolder;
-        background-color: rgba($color: #fe2e60, $alpha: 0.1);
-        padding: 5px 8px;
-        border-radius: 10px;
-        .analytic {
-          font-size: 25px;
-        }
-      }
-
-      .addproduct {
-        display: flex;
-        align-items: center;
-        font-weight: bolder;
-        padding: 5px 10px;
-        margin-top: 10px;
-        span {
-          margin-left: 8px;
-        }
-      }
-    }
     .signout {
       display: flex;
       align-items: center;
@@ -130,26 +63,83 @@
 
   .globalAn {
     display: flex;
-    .container {
-      width: 300px;
-      display: flex;
-      border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .form {
+      background-image: url("/geo.jpg");
+      background-size: cover;
+      // width: 25%;
       padding: 5px;
-      margin: 10px;
-      margin-top: 0;
-      background-color: rgb(254, 190, 22, 1);
-      color: white;
-      font-size: 20px;
-      font-weight: bolder;
-      height: 90px;
-      padding: 10px 15px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.64);
+      -webkit-box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.64);
+      -moz-box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.64);
+      form {
+        background-color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h3 {
+          margin-bottom: 10px;
+        }
+        .inputContainer {
+          background-color: #f2f6fc;
+          padding: 10px 30px;
+          display: flex;
+          flex-direction: column;
+          border-radius: 10px;
+          width: 300px;
+          margin-bottom: 15px;
+          label {
+            font-size: 16px;
+            font-weight: bolder;
+            color: #0071bc;
+            margin-right: 10px;
+          }
+          input {
+            background-color: #f2f6fc;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #0071bc;
+            height: 20px;
+          }
+        }
+        button {
+          width: 300px;
+          border-radius: 10px;
+          background-color: #0071bc;
+          border: none;
+          height: 50px;
+          font-weight: 900;
+          font-size: 20px;
+          color: white;
+          cursor: pointer;
+        }
       }
+    }
+
+    p {
+      margin-left: 20px;
+      padding: 5px 10px;
+      margin-top: 5px;
+    }
+
+    .positif {
+      background-color: #00e26a;
+      border-radius: 10px;
+    }
+    .neutre {
+      background-color: rgb(254, 190, 22, 0.3);
+      border-radius: 10px;
+    }
+    .negatif {
+      background-color: rgb(254, 46, 96);
+      border-radius: 10px;
     }
   }
 
@@ -163,7 +153,7 @@
     margin-left: 10px;
     background-image: url("/geo.jpg");
     background-size: cover;
-    width: 650px;
+    width: 50%;
     padding: 5px;
     border-radius: 10px;
     overflow-y: scroll;
